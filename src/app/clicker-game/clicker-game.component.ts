@@ -11,12 +11,13 @@ export class ClickerGameComponent implements OnInit {
   level$ = this.gameService.level$;
   upgradeMultiplier$ = this.gameService.upgradeMultiplier$;
   autoClickerLevel$ = this.gameService.autoClickerLevel$;
+  timeLeft$ = this.gameService.timeLeft$;
 
   constructor(private gameService: GameService) {}
 
   ngOnInit(): void {
     this.gameService.startAutoIncrement();
-    // this.gameService.startLevelTimer(); // Commented out to avoid undefined function call
+    this.gameService.startLevelTimer();
   }
 
   onScoreClick() {
