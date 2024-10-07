@@ -1,0 +1,50 @@
+.game-container {
+  text-align: center;
+}
+
+button {
+  font-size: 20px;
+  padding: 15px 30px;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  height: 30px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: green;
+  transition: width 1s linear;
+}
+
+
+/* Stili per schermi piccoli come quelli dei dispositivi mobili */
+@media (max-width: 600px) {
+  .game-container {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 90%;
+  }
+}

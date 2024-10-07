@@ -1,0 +1,12 @@
+<div class="game-container">
+  <h1>Incremental RxJS Game</h1>
+  <p>Punteggio: {{ score$ | async }}</p>
+  <p>Livello: {{ level$ | async }}</p>
+  <p>Moltiplicatore Potenziamenti: {{ upgradeMultiplier$ | async }}</p>
+  <p>Livello Auto-Clicker: {{ autoClickerLevel$ | async }}</p>
+  <p>Punteggio necessario per il prossimo livello: {{ (level$ | async) ? (level$ | async)! * 10 : 0 }}</p>
+  <button (click)="onScoreClick()">Incrementa Punteggio</button>
+  <button (click)="onNextLevelClick()">Prossimo Livello</button>
+  <button (click)="onBuyUpgradeClick()">Compra Potenziamento</button>
+  <button (click)="onBuyAutoClickerClick()">Compra Auto-Clicker</button>
+</div>
